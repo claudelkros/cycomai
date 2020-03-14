@@ -120,7 +120,6 @@
 
 .site__header{
   padding: 15px $general-padding 15px $general-padding;
-  height: 100vh;
   
 }
 
@@ -131,7 +130,9 @@
     justify-content: space-between;
 
     & .header__link{
-      width: 50%;
+      width: 55%;
+      align-items: center ;
+      justify-content: center;
 
       & .menu-primary-container #my_primary_class{
         display: flex;
@@ -141,15 +142,28 @@
           color: white;
           opacity: 0.6;
         }
+
+        & li{
+          padding: 0.8rem;
+        }
+
+        & li#menu-item-14{
+          border: 1px solid #f0f0f0;
+          
+        }
       }
     }
     
     & .header__title{
-      width: 50%;
+      width: 45%;
 
-      & h1 > a{
-        color: white;
-        opacity: 0.6;
+      & h1{
+          margin-left: unset;
+        & > a{
+          color: white;
+          opacity: 0.6;
+          display: flex;
+        }
       }
     }
   }
