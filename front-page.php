@@ -15,45 +15,105 @@
  */
 
 ?>
+<div class="about_front--page">
+	<?php $value = get_field('front')?>
+	<div class="title">
+		<p><?php echo $value['title']?></p>
+	</div>
+	<div class="sub__title">
 
-<?php if ( have_posts() ) : ?>
+		<div class="sub__title--primary">
+			<h3><?php echo $value['sub_title']?></h3>
+			<p><?php echo $value['description']?></p>
+		</div>
 
-	<?php if ( is_home() && ! is_front_page() ) : ?>
-		<header>
-			<h1 class="page-title screen-reader-text">
-				<?php single_post_title(); ?>
-			</h1>
-		</header>
-	<?php endif; ?>
+		<img src="<?php echo $value['image']['url']?>" alt="">
+	</div>
+</div>
 
-	<?php
-	// Start the loop.
-	while ( have_posts() ) :
-		the_post();
+<div class="research_front--page">
+	<?php $value = get_field('research')?>
 
-		/*
-		 * Include the Post-Format-specific template for the content if it's a post, otherwise include the Post-Type-specific template.
-		 */
-		get_template_part(
-			'template-parts/post/item',
-			get_post_type() !== 'post' ? get_post_type() : get_post_format()
+	<div class="sub__title">
+		<img src="<?php echo $value['image']['url']?>" alt="">
+
+		<div class="sub__title--primary">
+			
+			<ul>
+				<p><?php echo $value['title']?></p>
+				<li><?php echo $value['list_1']?></li>
+				<li><?php echo $value['list_2']?></li>
+				<li><?php echo $value['list_3']?></li>
+				<li><?php echo $value['list_4']?></li>
+				<li><?php echo $value['list_5']?></li>
+				<li><?php echo $value['list_6']?></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+<div class="title--posts">
+	<p>Recent news</p>
+</div>
+<div class="front__page--post">
+	<?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
+	<?php if (have_posts() ) : ?>
+
+		<?php if ( is_home() && ! is_front_page() ) : ?>
+			<header>
+				<h1 class="page-title screen-reader-text">
+					<?php single_post_title(); ?>
+				</h1>
+			</header>
+		<?php endif; ?>
+
+		
+			<?php
+			// Start the loop.
+			while ( $the_query->have_posts() ) :
+				$the_query->the_post(); ?>
+				<div class="front__page--post--list">
+					<?php
+					/*
+					* Include the Post-Format-specific template for the content if it's a post, otherwise include the Post-Type-specific template.
+					*/
+					// get_template_part(
+					// 	'template-parts/post/item',
+					// 	get_post_type() !== 'post' ? get_post_type() : get_post_format()
+					// );
+					the_title(
+						sprintf(
+							'<h2 class="entry-title" itemprop="headline"><a href="%s" rel="bookmark" itemprop="url">',
+							esc_url( get_permalink() )
+						),
+						'</a></h2>'
+					);
+					?>
+					<div class="entry-content" itemprop="description">
+						<?php the_excerpt(); ?>
+					</div><!-- .entry-content -->
+				</div>
+				<?php
+				// End the loop.
+			endwhile;
+			
+			?>
+		</div>
+		
+		<?php
+		// Previous/next page navigation.
+		the_posts_pagination(
+			array(
+				'prev_text'          => __( 'Previous page', 'genese' ),
+				'next_text'          => __( 'Next page', 'genese' ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'genese' ) . ' </span>',
+			)
 		);
 
-		// End the loop.
-	endwhile;
+		// If no content, include the "No posts found" template.
+	else :
+		get_template_part( 'content', 'none' );
 
-	// Previous/next page navigation.
-	the_posts_pagination(
-		array(
-			'prev_text'          => __( 'Previous page', 'genese' ),
-			'next_text'          => __( 'Next page', 'genese' ),
-			'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'genese' ) . ' </span>',
-		)
-	);
-
-	// If no content, include the "No posts found" template.
-else :
-	get_template_part( 'content', 'none' );
-
-endif;
-?>
+	endif;
+	?>
+</div>

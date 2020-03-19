@@ -3,7 +3,7 @@ const path = require( 'path' );
 module.exports = {
 	THEME_NAME: 'genese',
 	PROXY_TARGET: 'http://cycomai.test/',
-	HOST: 'localhost',
+	HOST: 'cycomai.test',
 	PORT: 3000,
 	PATHS: {
 		src: unipath( path.resolve( __dirname, 'src' ) ),

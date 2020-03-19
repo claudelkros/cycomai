@@ -48,7 +48,7 @@
 		 * Include the site sidebar.
 		 * Even if you don't need a sidebar, do not remove this line.
 		 */
-		get_sidebar();
+		// get_sidebar();
 		?>
 
 	</div><!-- .site__content -->

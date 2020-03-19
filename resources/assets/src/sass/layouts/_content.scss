@@ -9,3 +9,133 @@
 .acf-map img {
    max-width: inherit !important;
 }
+
+
+// Front Page Custom Code
+
+.about_front--page{
+    @media screen and (min-width: $screen-medium){
+      display: flex;
+      flex-direction: column;
+      padding: 0 2*$general-padding 0 2*$general-padding;
+      & .title{
+  
+        padding-top: $general-padding;
+  
+        & p{
+          font-weight: initial;
+          font-size: 3.2rem;
+          text-transform: uppercase;
+        }
+      }
+  
+      & .sub__title{
+        display: flex;
+        justify-content: space-between;
+        
+  
+        & .sub__title--primary{
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+  
+          letter-spacing: 0.1rem;
+  
+          & h3{
+            padding-top: $general-padding;
+            font-weight: 600;
+            opacity: 0.9;
+          }
+          & p{
+            font-weight: 100;
+          }
+        }
+  
+        & > img{
+          height: auto;
+          width: 440px;
+          opacity: 0.8;
+        }
+      }
+    }
+}
+  
+.research_front--page{
+    @media screen and (min-width: $screen-medium){
+        margin-top: 120px;
+        display: flex;
+        flex-direction: column;
+        padding: 0 2*$general-padding 0 2*$general-padding;
+        & .title{
+
+        padding-top: $general-padding;
+
+        & p{
+            font-weight: initial;
+            font-size: 3.2rem;
+            text-transform: uppercase;
+        }
+        }
+
+        & .sub__title{
+        display: flex;
+        justify-content: space-between;
+        
+
+            & .sub__title--primary{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                letter-spacing: 0.1rem;
+
+                & ul li{
+                margin-top: 15px;
+                }
+
+                & ul p{
+                font-size: 2rem;
+                }
+            }
+
+            & > img{
+                height: auto;
+                width: 600px;
+            }
+        }
+    }
+}
+
+.front__page--post{
+    padding: 0 2*$general-padding 0 2*$general-padding;
+
+    @media screen and (min-width: $screen-medium){
+        display: flex;
+        justify-content: space-between;
+
+        & .front__page--post--list{
+            width: 30%;
+
+            & h2 a{
+                font-size: 1.7rem;
+                font-weight: 100;
+                color: #3B719F;
+            }
+
+            & .entry-content{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+.title--posts{
+    padding: 0 2*$general-padding 0 2*$general-padding; 
+
+        & p{
+            font-weight: initial;
+            font-size: 3.2rem;
+            text-transform: uppercase;
+        }
+}
