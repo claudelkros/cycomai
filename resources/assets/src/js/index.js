@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
     tl.to('#item_3', { opacity: 0, duration: .5 })
     tl.to('#item_1', { opacity: 0, duration: .5 })
     tl.to('#item_2', { opacity: 0, duration: .5 })
-    tl.from('#container', { x: -100, ease: "slow(0.7, 0.7, false)", opacity: .7 })
+    tl.from('#container', { x: -250, ease: "slow(0.7, 0.7, false)", opacity: .7 })
     tl.to('#container', { x: 200 })
     tl.from('#leftText', { opacity: 0, y: 50, duration: 1, ease: "circ.out" })
 });

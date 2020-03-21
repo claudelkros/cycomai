@@ -130,6 +130,16 @@ body.fixed-navbar {
                     position: relative;
                     padding: .5rem 1.2rem .5rem 1.2rem;
                 }
+                & .current-menu-item a::after {
+                    content: '';
+                    position: absolute;
+                    width: 4rem;
+                    height: .1rem;
+                    background-color: rgb(255, 255, 255);
+                    bottom: 0rem;
+                    top: 1.7rem;
+                    left: 0;
+                }
                 & li:last-child {
                     border: .8px solid #f0f0f0;
                     margin-left: 1rem;
@@ -195,13 +205,15 @@ h2 {
 
 .hero-area {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 6rem;
     font-size: 1.1rem;
     opacity: .8;
     letter-spacing: 1px;
+    margin-top: 25vh;
+    height: 50vh;
+    margin-bottom: 25vh;
     #leftText {
-        padding-left: 2rem;
         width: 30vw;
         p,
         h3 {
