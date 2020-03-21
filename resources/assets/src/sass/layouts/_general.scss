@@ -12,6 +12,7 @@ textarea {
     font-size: ms(0);
     font-size: 1.3rem;
     font-weight: 300;
+    overflow-x: hidden;
 }
 
 h1,
@@ -23,9 +24,11 @@ h6 {
     font-family: $typography-fontface-default;
 }
 
+
 /**
  * POST
  */
+
 h1.entry-title {
     font-size: ms(2);
 }
@@ -48,7 +51,6 @@ h2.entry-title {
 .entry-meta {
     font-style: normal;
     margin-top: 0.5rem;
-
     a {
         color: currentColor !important;
     }
@@ -67,46 +69,37 @@ h2.entry-title {
 .site-info {
     padding: 0;
     text-align: initial;
-
-    > section {
+    >section {
         padding: 40px 0;
     }
-
     section.subscribe {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         background-color: #88bb22;
-
         h1 {
             margin: 16px 0;
         }
-
         .form-field {
             width: 40vw;
             margin: 0 auto;
-
             label {
                 text-align: right;
             }
         }
-
         button {
             background-color: #888;
-
             &:hover {
                 background-color: #111;
             }
         }
     }
-
     section.foot {
         .row {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-
             .col {
                 width: 25%;
             }
@@ -115,22 +108,24 @@ h2.entry-title {
 }
 
 .card .horizontal {
-	display: flex;
-  flex-direction: row;
-
-  .card__image {
-    position: relative;
-    width: 140px;
-  	height: 120px;
-    overflow: hidden;
-		background-color: #ddd;
-  }
+    display: flex;
+    flex-direction: row;
+    .card__image {
+        position: relative;
+        width: 140px;
+        height: 120px;
+        overflow: hidden;
+        background-color: #ddd;
+    }
 }
+
 .custom-logo {
     height: 60px !important;
     width: auto;
 }
-html, body{
+
+html,
+body {
     padding: 0;
     margin: 0;
 }
