@@ -142,11 +142,12 @@
         }
 
         & li{
-          padding: 1rem;
+          padding: .5rem;
         }
 
         & li:last-child{
           border: .8px solid #f0f0f0;
+          margin-left: .5rem;
         }
       }
     }
