@@ -1,14 +1,14 @@
 <?php
 /**
- * Template Name: Page project 
+ * Template Name: Page members
  
  */
 ?>
 
-<!-- OnGoing Projects -->
+<!-- Members -->
 <div class="front__page__projects flex-grid">
 			<?php 
-				$args = array( 'post_type' => 'Ongoing Projects' );
+				$args = array( 'post_type' => 'Members' );
 				$the_query = new WP_Query( $args ); 
 				?>
 				<?php if ( $the_query->have_posts() ) : ?>

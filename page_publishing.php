@@ -1,19 +1,19 @@
 <?php
 /**
- * Template Name: Page project 
+ * Template Name: Published Articles
  
  */
 ?>
 
-<!-- OnGoing Projects -->
+<!-- Published Articles -->
 <div class="front__page__projects flex-grid">
 			<?php 
-				$args = array( 'post_type' => 'Ongoing Projects' );
-				$the_query = new WP_Query( $args ); 
-				?>
+				$args = array( 'post_type' => 'Published Articles' );
+				$the_query = new WP_Query( $args ); ?>
 				<?php if ( $the_query->have_posts() ) : ?>
 					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-					<a class="col" href="<?php echo esc_url( get_permalink() ) ?>"><?php the_title(); ?></a>
+					<a class="col" href="<?php echo esc_url( get_permalink() ) ?>"><?php the_title(); ?>
+					<?php the_excerpt(); ?></a>
 					
 					<?php endwhile; else:  ?>
 				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
