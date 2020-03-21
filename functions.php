@@ -71,7 +71,7 @@ function wpm_Ongoing_Projects() {
 		'description'         => __( 'Tous sur Ongoing Projects'),
 		'labels'              => $labels,
 		// On définit les options disponibles dans l'éditeur de notre custom post type ( un titre, un auteur...)
-		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields', ),
 		/* 
 		* Différentes options supplémentaires
 		*/
