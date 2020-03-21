@@ -15,7 +15,8 @@
 		<header id="header" class="site__header" role="banner" itemscope itemtype="http://schema.org/WPHeader" style='background:url("<?php echo get_template_directory_uri()?>./resources/assets/src/sass/layouts/header.jpg");background-position: center;background-size: cover;background-repeat: no-repeat;height: 100vh; background-color:#213f58; background-blend-mode:multiply'>
 	<?php elseif(is_home()): ?>
 		<header id="header" class="site__header" role="banner" itemscope itemtype="http://schema.org/WPHeader" style="background: #3B719F">
-	<?php else: echo '';?>
+	<?php else: ?>
+		<header id="header" class="site__header" role="banner" itemscope itemtype="http://schema.org/WPHeader" style="background: #3B719F">
 	<?php endif; ?>
 		<div class="site-header--primary">
 		<hgroup class="header__title">

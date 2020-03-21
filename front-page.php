@@ -100,6 +100,25 @@
 			?>
 		</div>
 		
+		<div class="title--posts">
+			<p>Ongoing Porjects</p>
+		</div>
+
+		<!-- OnGoing Projects -->
+		<div class="front__page__projects flex-grid">
+			<?php 
+				$args = array( 'post_type' => 'Ongoing Projects', 'posts_per_page' => 6 );
+				$the_query = new WP_Query( $args ); 
+				?>
+				<?php if ( $the_query->have_posts() ) : ?>
+					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+					<a class="col" href="<?php echo esc_url( get_permalink() ) ?>"><?php the_title(); ?></a>
+					
+					<?php endwhile; else:  ?>
+				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+				<?php  endif; ?>
+		</div>
+
 		<?php
 		// Previous/next page navigation.
 		the_posts_pagination(

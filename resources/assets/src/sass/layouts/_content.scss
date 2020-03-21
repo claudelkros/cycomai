@@ -14,7 +14,7 @@
 // Front Page Custom Code
 
 .about_front--page{
-    @media screen and (min-width: $screen-medium){
+    @media screen and (min-width: $screen-medium-up){
       display: flex;
       flex-direction: column;
       padding: 0 2*$general-padding 0 2*$general-padding;
@@ -59,10 +59,44 @@
         }
       }
     }
+
+    @media screen and (max-width: $screen-small){
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 40px;
+      & .title{
+    
+        & p{
+          font-weight: initial;
+          text-transform: uppercase;
+        }
+      }
+
+      & .sub__title{
+      
+        & .sub__title--primary{
+  
+          letter-spacing: 0.1rem;
+  
+          & h3{
+            padding-top: $general-padding;
+            font-weight: 600;
+            opacity: 0.9;
+          }
+          & p{
+            font-weight: 100;
+          }
+        }
+  
+        & > img{
+          display: none;
+        }
+      }
+    }
 }
   
 .research_front--page{
-    @media screen and (min-width: $screen-medium){
+    @media screen and (min-width: $screen-medium-up){
         margin-top: 120px;
         display: flex;
         flex-direction: column;
@@ -105,28 +139,60 @@
             }
         }
     }
+
+    @media screen and (max-width: $screen-small){
+      & .sub__title{
+        
+
+        & > img{
+          display: none;
+        }
+      }
+    }
 }
 
 .front__page--post{
-    padding: 0 2*$general-padding 0 2*$general-padding;
+    
 
-    @media screen and (min-width: $screen-medium){
-        display: flex;
-        justify-content: space-between;
+    @media screen and (min-width: $screen-medium-up){
+      display: flex;
+      justify-content: space-between;
+      padding: 0 2*$general-padding 0 2*$general-padding;
 
-        & .front__page--post--list{
-            width: 30%;
+      & .front__page--post--list{
+          width: 30%;
 
-            & h2 a{
-                font-size: 1.7rem;
-                font-weight: 100;
-                color: #3B719F;
-            }
+          & h2 a{
+              font-size: 1.7rem;
+              font-weight: 100;
+              color: #3B719F;
+          }
 
-            & .entry-content{
-                font-size: 1.2rem;
-            }
-        }
+          & .entry-content{
+              font-size: 1.2rem;
+          }
+      }
+    }
+
+    @media screen and (max-width: $screen-small){
+      display: flex;
+      justify-content: space-between;
+
+      & .front__page--post--list{
+          width: 30%;
+
+          & h2 a{
+              font-size: 1.7rem;
+              font-weight: 100;
+              color: #3B719F;
+          }
+
+          & .entry-content{
+              font-size: 1.2rem;
+          }
+      }
+
+      
     }
 }
 
@@ -135,7 +201,48 @@
 
         & p{
             font-weight: initial;
-            font-size: 3.2rem;
+            font-size: 1.2rem;
             text-transform: uppercase;
         }
+}
+
+
+.flex-grid {
+  @media screen and (min-width: $screen-medium-up){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+    flex-wrap: wrap;
+
+    padding: 0 2*$general-padding 0 2*$general-padding;
+
+    & .col{
+      border: 1px solid #3B719F;
+      padding: 2rem; 
+      width: 100%;
+
+      text-align: center;
+      color: white;
+      background: #3B719F;
+      text-transform: uppercase;
+      font-weight: 200;
+    }
+  }
+  
+  @media screen and (max-width: $screen-small){
+    display: flex;
+    flex-direction: column;
+            
+    & .col{
+      border: 1px solid #3B719F;
+      padding: 1rem; 
+
+      text-align: center;
+      color: white;
+      background: #3B719F;
+      text-transform: uppercase;
+      margin-top: 30px;
+    }
+  }
+
 }
