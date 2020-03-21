@@ -119,43 +119,41 @@
 }
 
 .site__header{
-  padding: 15px $general-padding 15px $general-padding;
+  padding: 0px $general-padding 0px $general-padding;
   
 }
 
 .site-header--primary{
   @media screen and (min-width: $screen-medium){
 		display: flex;
-    
     justify-content: space-between;
 
     & .header__link{
-      width: 55%;
       align-items: center ;
       justify-content: center;
 
       & .menu-primary-container #my_primary_class{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
         & li a{
           color: white;
-          opacity: 0.6;
+          opacity: 0.8;
         }
 
         & li{
-          padding: 0.8rem;
+          padding: 1rem;
         }
 
-        & li#menu-item-14{
-          border: 1px solid #f0f0f0;
-          
+        & li:last-child{
+          border: .8px solid #f0f0f0;
         }
       }
     }
     
     & .header__title{
-      width: 45%;
+      display: flex;
+      align-items: center;
 
       & h1{
           margin-left: unset;
