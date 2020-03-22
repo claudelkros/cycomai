@@ -6,9 +6,9 @@
 ?>
 
 <!-- OnGoing Projects -->
-<div class="front__page__projects flex-grid">
+<div class="page__projects">
 	<h3>Projects</h3>
-	<div class="front__page__projects__list">
+	<div class="page__projects__list">
 			<?php 
 				$args = array( 'post_type' => 'Ongoing Projects' );
 				$the_query = new WP_Query( $args ); 

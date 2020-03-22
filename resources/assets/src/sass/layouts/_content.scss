@@ -200,13 +200,27 @@
 }
 
 // Projects area
-.front__page__projects {
+.page__projects {
     margin-top: 8vh;
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
-    margin-bottom: 5vh;
-    .front__page__projects__list {
+    margin-bottom: 10vh;
+    padding: 0 2*$general-padding 0 2*$general-padding;
+
+    .page__projects__list {
         margin-top: 10vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+
+        & .col {
+            padding: 1rem;
+            text-align: center;
+            color: white;
+            background: #3B719F;
+            margin-top: 30px;
+            line-height: 3rem;
+        }
     }
 }
