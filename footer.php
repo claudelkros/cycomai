@@ -15,7 +15,7 @@
 	<p class="copyright">
 		&copy; <span itemprop="copyrightYear">2017</span>
 		<span itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Person">
-			<span itemprop="name">Site Holder Name</span>
+			<span itemprop="name">CYCOMAI all rights reserved</span>
 		</span>.
 	</p>
 </footer><!-- .site__footer -->

@@ -201,26 +201,138 @@
 
 // Projects area
 .page__projects {
-    margin-top: 8vh;
-    background-color: whitesmoke;
+    //margin-top: 6vh;
     display: flex;
     flex-direction: column;
     margin-bottom: 10vh;
     padding: 0 2*$general-padding 0 2*$general-padding;
 
     .page__projects__list {
-        margin-top: 10vh;
+        margin-top: 7vh;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 1rem;
+        grid-gap: 1.5rem;
 
         & .col {
             padding: 1rem;
             text-align: center;
-            color: white;
-            background: #3B719F;
-            margin-top: 30px;
-            line-height: 3rem;
+            color: #3B719F;
+            background: rgb(253, 254, 255);
+            margin-top: 2rem;
+            font-weight: bold;
+            line-height: 2rem;
+            transition: all ease-in-out .2s;
+            box-shadow: 0px 1px 35px 0px rgba(230,230,230,1);
         }
+
+        // Hover animation
+
+        & .col:hover {
+            transform: scale(1.015);
+            transition: all ease-in-out .2s;
+        }
+
+        .summary {
+            padding-top: .5rem;
+            line-height: normal;
+            color: rgb(36, 36, 36);
+            letter-spacing: 1px;
+            font-weight: normal;
+            opacity: .9;
+        }
+    }
+
+    
+
+   
+}
+
+// General article style
+#main {
+    margin-top: 8vh ;
+    padding: 0rem 4rem;
+    .article {
+        
+    }
+
+    nav {
+        display: none;
+    }
+    
+}
+
+ .ongoingprojects {
+        h1 {
+            font-size: 1.7rem;
+            text-align: center;
+            margin-bottom: 3rem ;
+        }
+}
+
+
+// Published articles area
+.page__published__articles {
+    h3 {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    a {
+        color: #3B719F;
+        font-weight: bold;
+    }
+
+    .summary {
+        letter-spacing: 1px;
+        font-size: 1.2rem;
+        font-weight: normal;
+        margin: 0 0 2.5rem 0;
+    }
+}
+
+// Members area
+
+
+
+.members {
+
+    h1 {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .entry-content {
+        display: grid;
+        grid-template-areas:
+        'one one two two'
+        'three three three three'
+        'four four four .'
+    ;
+
+        p {
+            padding: 0 1rem;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            text-align: justify;
+        }
+        
+        p:nth-child(1) {
+            grid-area: one;
+        }
+        p:nth-child(2) {
+            grid-area: two;
+        }
+        h3 {
+            padding-top: 2rem;
+            grid-area: three;
+        }
+        ul {
+            grid-area: four;
+        }
+        
+    }
+
+    .entry-footer {
+        display: none;
     }
 }
