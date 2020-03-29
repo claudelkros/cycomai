@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "7cd9f39f1221058afa79";
+/******/ 	var hotCurrentHash = "204136382e8ccccb1f3f";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -3969,8 +3969,8 @@ if(true) {
 
 __webpack_require__(/*! webpack-hot-middleware/client?http://cycomai.test:3000 */"./node_modules/webpack-hot-middleware/client.js?http://cycomai.test:3000");
 __webpack_require__(/*! webpack/hot/only-dev-server */"./node_modules/webpack/hot/only-dev-server.js");
-__webpack_require__(/*! C:\laragon\www\cycomai\wp-content\themes\cycomai\resources\assets\src\js\index.js */"./resources/assets/src/js/index.js");
-module.exports = __webpack_require__(/*! C:\laragon\www\cycomai\wp-content\themes\cycomai\resources\assets\src\sass\style.scss */"./resources/assets/src/sass/style.scss");
+__webpack_require__(/*! C:\laragon\www\cycomai\wp-content\themes\genese\resources\assets\src\js\index.js */"./resources/assets/src/js/index.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\cycomai\wp-content\themes\genese\resources\assets\src\sass\style.scss */"./resources/assets/src/sass/style.scss");
 
 
 /***/ })
