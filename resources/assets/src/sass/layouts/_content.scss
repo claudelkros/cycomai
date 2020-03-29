@@ -169,14 +169,14 @@
 
 .flex-grid {
     @media screen and (min-width: $screen-medium-up) {
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 200px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
         flex-wrap: wrap;
         padding: 0 $general-padding 0 $general-padding;
         & .col {
             border: 1px solid #3B719F;
             padding: 1.2rem;
-            width: 100vw;
             text-align: center;
             color: white;
             background: #3B719F;
@@ -184,19 +184,19 @@
             font-weight: 200;
         }
     }
-    @media screen and (max-width: $screen-small) {
-        display: flex;
-        flex-direction: column;
-        & .col {
-            border: 1px solid #3B719F;
-            padding: 1rem;
-            text-align: center;
-            color: white;
-            background: #3B719F;
-            text-transform: uppercase;
-            margin-top: 30px;
-        }
-    }
+    // @media screen and (min-width: $screen-small) {
+    //     display: flex;
+    //     flex-direction: column;
+    //     & .col {
+    //         border: 1px solid #3B719F;
+    //         padding: 1rem;
+    //         text-align: center;
+    //         color: white;
+    //         background: #3B719F;
+    //         text-transform: uppercase;
+    //         margin-top: 30px;
+    //     }
+    // }
 }
 
 // Projects area
