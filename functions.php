@@ -191,3 +191,4 @@ function wpm_published_article() {
 
 add_action( 'init', 'wpm_published_article', 0 );
 
+add_theme_support( 'post-thumbnails' );
