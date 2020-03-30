@@ -11,9 +11,50 @@
 .acf-map img {
     max-width: inherit !important;
 }
-
+#main{
+    @media screen and (min-width: $screen-small) {
+        margin-top: 0 !important;
+        padding: 0 0 !important;
+    }
+}
 // Front Page Custom Code
 .about_front--page {
+    @media screen and (min-width: $screen-small) {
+        display: flex;
+        flex-direction: column;
+        // padding: 0 $general-padding 0 $general-padding;
+
+        & .title {
+            padding-top: $general-padding;
+            & p {
+                font-weight: initial;
+                font-size: 3.2rem;
+                text-transform: uppercase;
+            }
+        }
+        & .sub__title {
+            display: flex;
+            justify-content: space-between;
+            & .sub__title--primary {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                letter-spacing: 0.1rem;
+                & h3 {
+                    font-weight: 600;
+                    opacity: 0.9;
+                }
+                & p {
+                    font-weight: 100;
+                }
+            }
+            &>img {
+                display: none;
+            }
+        }
+        
+    }
     @media screen and (min-width: $screen-medium-up) {
         display: flex;
         flex-direction: column;
@@ -50,32 +91,32 @@
             }
         }
     }
-    @media screen and (max-width: $screen-small) {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 40px;
-        & .title {
-            & p {
-                font-weight: initial;
-                text-transform: uppercase;
-            }
-        }
-        & .sub__title {
-            & .sub__title--primary {
-                letter-spacing: 0.1rem;
-                & h3 {
-                    font-weight: 600;
-                    opacity: 0.9;
-                }
-                & p {
-                    font-weight: 100;
-                }
-            }
-            &>img {
-                display: none;
-            }
-        }
-    }
+    // @media screen and (max-width: $screen-small) {
+    //     display: flex;
+    //     flex-direction: column;
+    //     margin-bottom: 40px;
+    //     & .title {
+    //         & p {
+    //             font-weight: initial;
+    //             text-transform: uppercase;
+    //         }
+    //     }
+    //     & .sub__title {
+    //         & .sub__title--primary {
+    //             letter-spacing: 0.1rem;
+    //             & h3 {
+    //                 font-weight: 600;
+    //                 opacity: 0.9;
+    //             }
+    //             & p {
+    //                 font-weight: 100;
+    //             }
+    //         }
+    //         &>img {
+    //             display: none;
+    //         }
+    //     }
+    // }
 }
 
 .research_front--page {
@@ -113,8 +154,22 @@
             }
         }
     }
-    @media screen and (max-width: $screen-small) {
+    @media screen and (min-width: $screen-small) {
         & .sub__title {
+            display: flex;
+            justify-content: space-between;
+            & .sub__title--primary {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                letter-spacing: 0.1rem;
+                & ul li {
+                    margin-top: 15px;
+                }
+                & ul p {
+                    font-size: 2rem;
+                }
+            }
             &>img {
                 display: none;
             }
