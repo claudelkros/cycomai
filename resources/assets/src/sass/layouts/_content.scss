@@ -178,7 +178,7 @@
        border: 1px solid #3B719F;
        padding: 1.2rem;
        text-align: center;
-             color: white;
+            color: white;
              background: #3B719F;
       text-transform: uppercase;
              font-weight: 200;
@@ -210,11 +210,11 @@
     .page__projects__list {
         margin-top: 7vh;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         grid-gap: 1.5rem;
 
         & .col {
-            padding: 1rem;
+            padding: 1.2rem;
             text-align: center;
             color: #3B719F;
             background: rgb(253, 254, 255);
