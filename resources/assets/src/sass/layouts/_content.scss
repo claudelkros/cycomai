@@ -121,7 +121,7 @@
                 }
             }
             &>img {
-                width: 350px;
+                width: 500px;
                 height: auto;
             }
         }
@@ -136,7 +136,7 @@
 }
 
 .front__page--post {
-    @media screen and (min-width: $screen-medium-up) {
+   @media screen and (min-width: $screen-medium-up) {
         display: flex;
         justify-content: space-between;
         // padding: 0 $general-padding 0 $general-padding;
@@ -195,13 +195,14 @@
         grid-gap: 20px;
 
        & .col {
+       font-size: 1.1rem;
        border: 1px solid #3B719F;
        padding: 1.2rem;
        text-align: center;
-            color: white;
-             background: #3B719F;
-      text-transform: uppercase;
-             font-weight: 200;
+       color: white;
+       background: #3B719F;
+       text-transform: uppercase;
+       font-weight: 200;
         }
     }
     // @media screen and (min-width: $screen-small) {
@@ -278,6 +279,11 @@
     nav {
         display: none;
     }
+
+    h1 {
+        text-align: center;
+        font-size: 1.7rem;
+    }
     
 }
 
@@ -316,9 +322,13 @@
 
 .members {
 
-    h1 {
-        font-size: 1.5rem;
+    h1, h3 {
+        font-size: 1.7rem;
         padding: 0 1rem;
+    }
+
+    h3 {
+       padding-bottom: 1rem; 
     }
 
     .entry-content {
@@ -334,6 +344,21 @@
             font-size: 1.2rem;
             letter-spacing: 1px;
             text-align: justify;
+        }
+
+        ul {       
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            padding: 1.2rem;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            text-transform: uppercase;
+            font-weight: 200;
         }
         
         p:nth-child(1) {
@@ -354,5 +379,42 @@
 
     .entry-footer {
         display: none;
+    }
+}
+
+
+// News area
+
+.status-publish {
+    padding: 0 4rem;
+
+    h2 {
+        font-size: 1.2rem;
+        margin-top: 4rem;
+        margin-bottom: 0;
+        
+
+     
+    }
+    .entry-header .entry-title a {
+            color: #3B719F;
+    }
+
+    a img {
+        width: 40%;
+        height: auto;
+    }
+
+    .entry-meta {
+        font-size: 1rem;
+        padding: .5rem;
+
+        .byline {
+            display: none;
+        }
+    }
+
+    .entry-content {
+        font-size: 1.2rem;
     }
 }
