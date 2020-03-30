@@ -90,7 +90,7 @@
 					);
 					?>
 					<div class="entry-content" itemprop="description">
-						<?php the_excerpt(); ?>
+						<?php the_post_thumbnail(); ?>
 					</div><!-- .entry-content -->
 				</div>
 				<?php
