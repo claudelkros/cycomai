@@ -10,6 +10,8 @@
  * @since 1.0
  */
 
+$iot = get_field('iot-text')
+
 ?>
 	<?php if(is_front_page()): ?>
 		<header id="header" class="site__header" role="banner" itemscope itemtype="http://schema.org/WPHeader" style='background:url("<?php echo get_template_directory_uri()?>./resources/assets/src/sass/layouts/header.jpg");background-position: center;background-size: cover;background-repeat: no-repeat;height: 100vh; background-color:#213f58; background-blend-mode:multiply'>
@@ -40,10 +42,10 @@
     <div id="container">
         <div class="container-description__left">
             <div id="item_1">
-                Everything connected
+                <?php echo $iot['text1']?>
             </div>
             <div id="item_2">
-                Everything connected
+                <?php echo $iot['text2']?>
             </div>
         </div>
 <svg width="223" height="337" viewBox="0 0 223 337" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -213,10 +215,10 @@
 
         <div class="container-description__right ">
             <div id="item_3">
-                Everything connected
+                <?php echo $iot['text3']?>
             </div>
             <div id="item_4">
-                Everything connected
+               <?php echo $iot['text4']?>
             </div>
         </div>
 

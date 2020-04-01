@@ -21,6 +21,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
 
 	<?php wp_head(); ?>
 </head>
@@ -53,10 +54,10 @@
 
 	</div><!-- .site__content -->
 
-	<?php get_footer(); ?>
-
+	
 </div><!-- .site -->
 
+<?php get_footer(); ?>
 <?php wp_footer(); ?>
 </body>
 </html>

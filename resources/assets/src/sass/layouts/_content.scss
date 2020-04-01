@@ -256,7 +256,7 @@
 }
 
 .flex-grid {
-<<<<<<< HEAD
+
     @media screen and (min-width: $screen-medium-up) {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -287,9 +287,12 @@
     //         margin-top: 30px;
     //     }
     // }
-=======
     
->>>>>>> bfa5f82db7b485d674f76ae0adaaffbdc06fe4f8
+
+
+
+
+    
 }
 
 // Projects area
@@ -367,6 +370,7 @@
 
 // Published articles area
 .page__published__articles {
+    padding: 0 6rem;
     h3 {
         text-align: center;
         margin-bottom: 2.5rem;
@@ -382,11 +386,15 @@
         font-size: 1.2rem;
         font-weight: normal;
         margin: 0 0 2.5rem 0;
+        text-align: justify;
     }
 }
 
 // Members area
 
+.page__members {
+    display: grid;
+}
 
 
 .members {
@@ -455,7 +463,7 @@
 // News area
 
 .status-publish {
-    padding: 0 4rem;
+    padding: 0 6rem;
 
     h2 {
         font-size: 1.2rem;
@@ -470,8 +478,9 @@
     }
 
     a img {
-        width: 40%;
-        height: auto;
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
     }
 
     .entry-meta {
@@ -485,5 +494,28 @@
 
     .entry-content {
         font-size: 1.2rem;
+        text-align: justify;
+    }
+}
+
+// Footer
+#page {
+    min-height: calc(100vh - 85);
+}
+
+#footer {
+    position: relative;
+    margin-bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(59, 109, 184) , rgb(102, 181, 250));
+    height: 20vh;
+    margin-top: 6rem;
+    padding: 0 $general-padding;
+    color: white;
+
+    p {
+        position: absolute;
+        bottom: 0;
+        opacity: .8;
     }
 }
