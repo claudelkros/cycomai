@@ -15,7 +15,7 @@
  */
 
 ?>
-<div class="about_front--page">
+<div class="about_front--page" data-aos="fade-up">
 	<?php $value = get_field('front')?>
 	<div class="title">
 		<p><?php echo $value['title']?></p>
@@ -38,7 +38,7 @@
 		<img src="<?php echo $value['image']['url']?>" alt="">
 
 		<div class="sub__title--primary">
-			
+
 			<ul>
 				<p><?php echo $value['title']?></p>
 				<li><?php echo $value['list_1']?></li>
@@ -56,7 +56,7 @@
 	<p>Recent news</p>
 </div>
 <div class="front__page--post">
-	<?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
+	<?php $the_query = new WP_Query( 'posts_per_page=4' ); ?>
 	<?php if (have_posts() ) : ?>
 
 		<?php if ( is_home() && ! is_front_page() ) : ?>
@@ -67,53 +67,59 @@
 			</header>
 		<?php endif; ?>
 
-		
+
 			<?php
 			// Start the loop.
 			while ( $the_query->have_posts() ) :
 				$the_query->the_post(); ?>
 				<div class="front__page--post--list">
-					<?php
-					/*
-					* Include the Post-Format-specific template for the content if it's a post, otherwise include the Post-Type-specific template.
-					*/
-					// get_template_part(
-					// 	'template-parts/post/item',
-					// 	get_post_type() !== 'post' ? get_post_type() : get_post_format()
-					// );
-					the_title(
-						sprintf(
-							'<h2 class="entry-title" itemprop="headline"><a href="%s" rel="bookmark" itemprop="url">',
-							esc_url( get_permalink() )
-						),
-						'</a></h2>'
-					);
-					?>
+
 					<div class="entry-content" itemprop="description">
 						<?php the_post_thumbnail(); ?>
+							<div class="text-content">
+								<?php
+								/*
+								* Include the Post-Format-specific template for the content if it's a post, otherwise include the Post-Type-specific template.
+								*/
+								// get_template_part(
+								// 	'template-parts/post/item',
+								// 	get_post_type() !== 'post' ? get_post_type() : get_post_format()
+								// );
+								the_title(
+									sprintf(
+										'<h2 class="entry-title" itemprop="headline"><a href="%s" rel="bookmark" itemprop="url">',
+										esc_url( get_permalink() )
+									),
+									'</a></h2>'
+								);
+		
+		
+								?>
+							</div>
+						<?php the_excerpt(); ?>
 					</div><!-- .entry-content -->
 				</div>
 				<?php
 				// End the loop.
 			endwhile;
-			
+
 			?>
 		</div>
-		
+
 		<div class="title--posts">
 			<p>Ongoing Porjects</p>
 		</div>
 
 		<!-- OnGoing Projects -->
 		<div class="front__page__projects flex-grid">
-			<?php 
+			<?php
 				$args = array( 'post_type' => 'Ongoing Projects', 'posts_per_page' => 6 );
-				$the_query = new WP_Query( $args ); 
+				$the_query = new WP_Query( $args );
 				?>
 				<?php if ( $the_query->have_posts() ) : ?>
 					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 					<a class="col" href="<?php echo esc_url( get_permalink() ) ?>"><?php the_title(); ?></a>
-					
+
 					<?php endwhile; else:  ?>
 				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 				<?php  endif; ?>

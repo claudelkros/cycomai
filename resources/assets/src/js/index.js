@@ -1,4 +1,6 @@
 window.addEventListener('load', () => {
+
+    AOS.init();
     var tl = gsap.timeline();
 
     tl.from('#box', { opacity: 0, y: 50, duration: .5 })
