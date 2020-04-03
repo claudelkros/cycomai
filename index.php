@@ -15,45 +15,45 @@
  */
 
 ?>
+<center><h3 style="margin-bottom: 3rem">News</h3></center> 
 
-<?php if ( have_posts() ) : ?>
+<div class="news-area">
 
-	<?php if ( is_home() && ! is_front_page() ) : ?>
-		<header>
-			<h1 class="page-title screen-reader-text">
-				<?php single_post_title(); ?>
-			</h1>
-		</header>
-	<?php endif; ?>
+	<?php if ( have_posts() ) : ?>
 
-	<?php
-	// Start the loop.
-	while ( have_posts() ) :
-		the_post();
+		<?php if ( is_home() && ! is_front_page() ) : ?>
+		<?php endif; ?>
 
-		/*
-		 * Include the Post-Format-specific template for the content if it's a post, otherwise include the Post-Type-specific template.
-		 */
-		get_template_part(
-			'template-parts/post/item',
-			get_post_type() !== 'post' ? get_post_type() : get_post_format()
+		<?php
+		// Start the loop.
+		while ( have_posts() ) :
+			the_post();
+
+			/*
+			* Include the Post-Format-specific template for the content if it's a post, otherwise include the Post-Type-specific template.
+			*/
+			get_template_part(
+				'template-parts/post/item',
+				get_post_type() !== 'post' ? get_post_type() : get_post_format()
+			);
+
+			// End the loop.
+		endwhile;
+
+		// Previous/next page navigation.
+		the_posts_pagination(
+			array(
+				'prev_text'          => __( 'Previous page', 'genese' ),
+				'next_text'          => __( 'Next page', 'genese' ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'genese' ) . ' </span>',
+			)
 		);
 
-		// End the loop.
-	endwhile;
+		// If no content, include the "No posts found" template.
+	else :
+		get_template_part( 'content', 'none' );
 
-	// Previous/next page navigation.
-	the_posts_pagination(
-		array(
-			'prev_text'          => __( 'Previous page', 'genese' ),
-			'next_text'          => __( 'Next page', 'genese' ),
-			'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'genese' ) . ' </span>',
-		)
-	);
+	endif;
+	?>
+</div>
 
-	// If no content, include the "No posts found" template.
-else :
-	get_template_part( 'content', 'none' );
-
-endif;
-?>

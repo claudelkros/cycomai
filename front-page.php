@@ -18,7 +18,7 @@
 <div class="about_front--page" data-aos="fade-up">
 	<?php $value = get_field('front')?>
 	<div class="title">
-		<p><?php echo $value['title']?></p>
+		<h3><?php echo $value['title']?></h3>
 	</div>
 	<div class="sub__title">
 
@@ -40,7 +40,7 @@
 		<div class="sub__title--primary">
 
 			<ul>
-				<p><?php echo $value['title']?></p>
+				<h3><?php echo $value['title']?></h3>
 				<li><?php echo $value['list_1']?></li>
 				<li><?php echo $value['list_2']?></li>
 				<li><?php echo $value['list_3']?></li>

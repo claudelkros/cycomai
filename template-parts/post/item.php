@@ -11,6 +11,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemid="<?php echo esc_url( get_permalink() ); ?>" itemscope itemtype="http://schema.org/BlogPosting">
 
+		<?php genese_post_thumbnail(); ?>
+
 	<header class="entry-header">
 
 		<?php
@@ -33,10 +35,7 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 
-	</header><!-- .entry-header -->
-
-	<?php genese_post_thumbnail(); ?>
-
+	</header><!-- .entry-header -->	
 	<div class="entry-content" itemprop="description">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
